@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="a"
+                 name="Android"
+                 start-page="001-partie-1.md">
+
+    <toc-element topic="001-partie-1.md">
+        <toc-element topic="001-01-module-01.md"/>
+        <toc-element topic="001-02-module-02.md"/>
+        <toc-element topic="001-03-module-03.md"/>
+        <toc-element topic="001-04-module-04.md"/>
+    </toc-element>
+    <toc-element topic="002-Partie-2.md">
+        <toc-element topic="002-01-module-05.md"/>
+        <toc-element topic="002-02-module-06.md"/>
+        <toc-element topic="002-03-module-07.md"/>
+    </toc-element>
+    <toc-element topic="003-Partie-3.md">
+        <toc-element topic="003-01-module-08.md"/>
+        <toc-element topic="003-02-module-09.md"/>
+    </toc-element>
+    <toc-element topic="004-partie-04.md">
+        <toc-element topic="004-01-module-10.md"/>
+        <toc-element topic="004-02-module-11.md"/>
+        <toc-element topic="004-03-module-12.md"/>
+        <toc-element topic="004-04-module-13.md"/>
+    </toc-element>
+    <toc-element topic="005-partie-05.md">
+        <toc-element topic="005-01-module-14.md"/>
+        <toc-element topic="005-02-module-15.md"/>
+        <toc-element topic="005-03-module-16.md"/>
+    </toc-element>
+    <toc-element topic="006-conclusion.md"/>
+    <toc-element topic="007-bonus.md">
+        <toc-element topic="007-01-module-17.md"/>
+        <toc-element topic="007-02-module-18.md"/>
+        <toc-element topic="007-03-module-19.md"/>
+        <toc-element topic="007-004-module-20.md"/>
+        <toc-element topic="007-005-module-21.md"/>
+    </toc-element>
+</instance-profile>

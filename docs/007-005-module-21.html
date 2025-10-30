@@ -1,0 +1,187 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2025-10-30T17:42:53.819537"><title>Module 21 : Int&eacute;grer les Capacit&eacute;s Natives du T&eacute;l&eacute;phone | Android</title><script type="application/json" id="virtual-toc-data">[{"id":"introduction","level":0,"title":"Introduction","anchor":"#introduction"},{"id":"pr-requis","level":0,"title":"Prérequis","anchor":"#pr-requis"},{"id":"objectifs-d-apprentissage","level":0,"title":"Objectifs d\u0027Apprentissage","anchor":"#objectifs-d-apprentissage"},{"id":"1-le-pilier-fondamental-g-rer-les-permissions","level":0,"title":"1. Le Pilier Fondamental : Gérer les Permissions","anchor":"#1-le-pilier-fondamental-g-rer-les-permissions"},{"id":"2-l-appareil-photo","level":0,"title":"2. L\u0027Appareil Photo","anchor":"#2-l-appareil-photo"},{"id":"3-la-g-olocalisation","level":0,"title":"3. La Géolocalisation","anchor":"#3-la-g-olocalisation"},{"id":"4-la-cartographie","level":0,"title":"4. La Cartographie","anchor":"#4-la-cartographie"},{"id":"r-sum-et-bonnes-pratiques","level":0,"title":"Résumé et Bonnes Pratiques","anchor":"#r-sum-et-bonnes-pratiques"},{"id":"exercices-pratiques","level":0,"title":"Exercices Pratiques","anchor":"#exercices-pratiques"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Module 21 : Int&eacute;grer les Capacit&eacute;s Natives du T&eacute;l&eacute;phone | Android"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Android Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/007-005-module-21.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Module 21 : Int&eacute;grer les Capacit&eacute;s Natives du T&eacute;l&eacute;phone | Android"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/007-005-module-21.html#webpage",
+    "url": "writerside-documentation/007-005-module-21.html",
+    "name": "Module 21 : Int&eacute;grer les Capacit&eacute;s Natives du T&eacute;l&eacute;phone | Android",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "Android Help"
+}</script><!-- End Schema.org --></head><body data-id="007-005-module-21" data-main-title="Module 21 : Intégrer les Capacités Natives du Téléphone" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="007-bonus.md|Pour aller plus loin : L'Horizon du Développeur Android"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Android  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="007-005-module-21" id="007-005-module-21.md">Module 21 : Intégrer les Capacités Natives du Téléphone</h1><section class="chapter"><h2 id="introduction" data-toc="introduction"><span class="control" id="vxtmt4_15">Introduction</span></h2><p id="vxtmt4_13">Les applications modernes tirent leur puissance de leur capacit&eacute; &agrave; interagir avec le mat&eacute;riel du t&eacute;l&eacute;phone. Permettre &agrave; un utilisateur de prendre une photo, de trouver sa position sur une carte ou de taguer une localisation sont des fonctionnalit&eacute;s qui cr&eacute;ent une exp&eacute;rience riche et engageante.</p><p id="vxtmt4_14">Dans ce module, nous allons explorer comment int&eacute;grer trois des fonctionnalit&eacute;s natives les plus courantes : l'appareil photo, la g&eacute;olocalisation et la cartographie. Nous mettrons l'accent sur les biblioth&egrave;ques Jetpack et les API modernes qui simplifient ces t&acirc;ches complexes.</p></section><section class="chapter"><h2 id="pr-requis" data-toc="pr-requis"><span class="control" id="vxtmt4_18">Pr&eacute;requis</span></h2><ul class="list _bullet" id="vxtmt4_17"><li class="list__item" id="vxtmt4_19"><p id="vxtmt4_22">Connaissance de Kotlin et des principes de base du d&eacute;veloppement Android (Activity, Fragment).</p></li><li class="list__item" id="vxtmt4_20"><p id="vxtmt4_23">Compr&eacute;hension du cycle de vie des composants Android.</p></li><li class="list__item" id="vxtmt4_21"><p id="vxtmt4_24">Android Studio configur&eacute;.</p></li></ul></section><section class="chapter"><h2 id="objectifs-d-apprentissage" data-toc="objectifs-d-apprentissage"><span class="control" id="vxtmt4_29">Objectifs d'Apprentissage</span></h2><p id="vxtmt4_26">&Agrave; la fin de ce module, vous serez capable de :</p><ul class="list _bullet" id="vxtmt4_27"><li class="list__item" id="vxtmt4_30"><p id="vxtmt4_34">Demander les permissions d'ex&eacute;cution (runtime permissions) de mani&egrave;re propre.</p></li><li class="list__item" id="vxtmt4_31"><p id="vxtmt4_35">Prendre une photo en utilisant une <code class="code" id="vxtmt4_36">Intent</code> ou la biblioth&egrave;que CameraX.</p></li><li class="list__item" id="vxtmt4_32"><p id="vxtmt4_37">Obtenir la position GPS de l'utilisateur avec le <code class="code" id="vxtmt4_38">FusedLocationProviderClient</code>.</p></li><li class="list__item" id="vxtmt4_33"><p id="vxtmt4_39">Afficher une carte Google Maps et y placer un marqueur.</p></li></ul></section><section class="chapter"><h2 id="1-le-pilier-fondamental-g-rer-les-permissions" data-toc="1-le-pilier-fondamental-g-rer-les-permissions"><span class="control" id="vxtmt4_48">1. Le Pilier Fondamental : G&eacute;rer les Permissions</span></h2><p id="vxtmt4_41">Avant toute chose, l'acc&egrave;s &agrave; l'appareil photo et &agrave; la g&eacute;olocalisation requiert l'autorisation explicite de l' utilisateur. Depuis Android 6.0 (API 23), ces permissions sont demand&eacute;es &agrave; l'ex&eacute;cution (runtime).</p><p id="vxtmt4_42"><span class="control" id="vxtmt4_49">&Eacute;tape 1 : D&eacute;clarer les permissions dans <code class="code" id="vxtmt4_50">AndroidManifest.xml</code></span></p><div class="code-block" data-lang="markup">
+&lt;!-- Pour l'appareil photo --&gt;
+&lt;uses-feature android:name=&quot;android.hardware.camera&quot; android:required=&quot;true&quot;/&gt;
+&lt;uses-permission android:name=&quot;android.permission.CAMERA&quot;/&gt;
+
+        &lt;!-- Pour la géolocalisation --&gt;
+&lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot;/&gt;
+&lt;uses-permission android:name=&quot;android.permission.ACCESS_COARSE_LOCATION&quot;/&gt;
+</div><p id="vxtmt4_44"><span class="control" id="vxtmt4_51">&Eacute;tape 2 : Demander la permission &agrave; l'ex&eacute;cution</span></p><p id="vxtmt4_45">La m&eacute;thode moderne utilise l' <span class="control" id="vxtmt4_52">Activity Result API</span>. C'est une approche d&eacute;coupl&eacute;e et plus simple &agrave; g&eacute;rer que l'ancienne m&eacute;thode <code class="code" id="vxtmt4_53">onRequestPermissionsResult()</code>.</p><div class="code-block" data-lang="kotlin">
+// Dans votre Fragment ou Activity
+
+// 1. Préparer le lanceur de la demande de permission
+private val requestPermissionLauncher =
+    registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted: Boolean -&gt;
+        if (isGranted) {
+            // Permission accordée. On peut lancer la logique (ex: prendre une photo)
+            Log.d(&quot;Permission&quot;, &quot;Permission accordée&quot;)
+            launchCamera()
+        } else {
+            // Permission refusée. Afficher un message à l'utilisateur.
+            Log.d(&quot;Permission&quot;, &quot;Permission refusée&quot;)
+            Toast.makeText(
+                requireContext(),
+                &quot;Permission nécessaire pour utiliser cette fonctionnalité&quot;,
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+    }
+
+// 2. Créer une fonction pour vérifier et demander la permission
+private fun askCameraPermission() {
+    when {
+        // A. La permission est déjà accordée
+        ContextCompat.checkSelfPermission(
+            requireContext(),
+            android.Manifest.permission.CAMERA
+        ) == PackageManager.PERMISSION_GRANTED -&gt; {
+            launchCamera()
+        }
+        // B. (Optionnel) Expliquer pourquoi la permission est nécessaire
+        shouldShowRequestPermissionRationale(android.Manifest.permission.CAMERA) -&gt; {
+            // Afficher une UI expliquant le besoin (dialogue, snackbar...)
+            // Puis appeler requestPermissionLauncher.launch()
+        }
+        // C. Demander la permission
+        else -&gt; {
+            requestPermissionLauncher.launch(android.Manifest.permission.CAMERA)
+        }
+    }
+}
+</div></section><section class="chapter"><h2 id="2-l-appareil-photo" data-toc="2-l-appareil-photo"><span class="control" id="vxtmt4_58">2. L'Appareil Photo</span></h2><p id="vxtmt4_55">Il existe deux approches principales pour prendre une photo.</p><section class="chapter"><h3 id="approche-1-simple-avec-une-intent-recommand-pour-les-cas-simples" data-toc="approche-1-simple-avec-une-intent-recommand-pour-les-cas-simples"><span class="control" id="vxtmt4_62">Approche 1 : Simple avec une <code class="code" id="vxtmt4_63">Intent</code> (Recommand&eacute; pour les cas simples)</span></h3><p id="vxtmt4_60">Cette m&eacute;thode d&eacute;l&egrave;gue la prise de photo &agrave; l'application Appareil Photo d&eacute;j&agrave; install&eacute;e sur le t&eacute;l&eacute;phone.</p><div class="code-block" data-lang="kotlin">
+// 1. Préparer le lanceur qui recevra l'image (un simple Bitmap)
+private val takePictureLauncher =
+    registerForActivityResult(ActivityResultContracts.TakePicturePreview()) { bitmap: Bitmap? -&gt;
+        if (bitmap != null) {
+            myImageView.setImageBitmap(bitmap)
+        }
+    }
+
+// 2. Fonction pour lancer l'appareil photo
+fun launchCamera() {
+    takePictureLauncher.launch()
+}
+
+// 3. Le bouton qui déclenche le tout
+myButton.setOnClickListener {
+    // On utilise la fonction de gestion des permissions vue plus haut
+    askCameraPermission()
+}
+</div></section><section class="chapter"><h3 id="approche-2-avanc-e-avec-camerax-pour-une-ui-personnalis-e" data-toc="approche-2-avanc-e-avec-camerax-pour-une-ui-personnalis-e"><span class="control" id="vxtmt4_72">Approche 2 : Avanc&eacute;e avec CameraX (Pour une UI personnalis&eacute;e)</span></h3><p id="vxtmt4_65">CameraX est une biblioth&egrave;que Jetpack qui simplifie &eacute;norm&eacute;ment l'utilisation de l'API Camera2. Elle est lifecycle-aware et g&egrave;re les sp&eacute;cificit&eacute;s de chaque appareil pour vous.</p><p id="vxtmt4_66"><span class="control" id="vxtmt4_73">D&eacute;pendances (<code class="code" id="vxtmt4_74">build.gradle</code>)</span></p><div class="code-block" data-lang="groovy">
+def camerax_version = &quot;1.1.0&quot; // Vérifier la dernière version
+implementation &quot;androidx.camera:camera-core:${camerax_version}&quot;
+implementation &quot;androidx.camera:camera-camera2:${camerax_version}&quot;
+implementation &quot;androidx.camera:camera-lifecycle:${camerax_version}&quot;
+implementation &quot;androidx.camera:camera-view:${camerax_version}&quot;
+</div><p id="vxtmt4_68"><span class="control" id="vxtmt4_75">Utilisation (conceptuelle)</span> L'impl&eacute;mentation est plus complexe, mais voici le principe :</p><ol class="list _decimal" id="vxtmt4_69" type="1"><li class="list__item" id="vxtmt4_76"><p id="vxtmt4_79">Ajouter un <code class="code" id="vxtmt4_80">&lt;PreviewView&gt;</code> &agrave; votre layout XML.</p></li><li class="list__item" id="vxtmt4_77"><p id="vxtmt4_81">Dans votre code, cr&eacute;er des &quot;cas d'utilisation&quot; (<code class="code" id="vxtmt4_82">UseCase</code>) : <code class="code" id="vxtmt4_83">Preview</code>, <code class="code" id="vxtmt4_84">ImageCapture</code>.</p></li><li class="list__item" id="vxtmt4_78"><p id="vxtmt4_85">Lier ces cas d'utilisation au cycle de vie de votre Fragment/Activity.</p></li></ol><div class="code-block" data-lang="kotlin">
+// Extrait conceptuel
+fun startCamera() {
+    val cameraProviderFuture = ProcessCameraProvider.getInstance(requireContext())
+    cameraProviderFuture.addListener({
+        val cameraProvider = cameraProviderFuture.get()
+
+        // Use case pour l'aperçu
+        val preview = Preview.Builder().build().also {
+            it.setSurfaceProvider(viewFinder.surfaceProvider) // viewFinder est votre PreviewView
+        }
+
+        // Use case pour la capture d'image
+        imageCapture = ImageCapture.Builder().build()
+
+        val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
+
+        try {
+            cameraProvider.unbindAll()
+            // Lier les use cases au cycle de vie
+            cameraProvider.bindToLifecycle(
+                this, cameraSelector, preview, imageCapture
+            )
+        } catch (exc: Exception) {
+            Log.e(&quot;CameraX&quot;, &quot;Échec de la liaison&quot;, exc)
+        }
+    }, ContextCompat.getMainExecutor(requireContext()))
+}
+</div></section></section><section class="chapter"><h2 id="3-la-g-olocalisation" data-toc="3-la-g-olocalisation"><span class="control" id="vxtmt4_94">3. La G&eacute;olocalisation</span></h2><p id="vxtmt4_87">L'API recommand&eacute;e est le <span class="control" id="vxtmt4_95">Fused Location Provider</span> des services Google Play. Elle combine intelligemment le GPS, le Wi-Fi et les r&eacute;seaux cellulaires pour fournir la meilleure position possible tout en optimisant la batterie.</p><p id="vxtmt4_88"><span class="control" id="vxtmt4_96">D&eacute;pendance (<code class="code" id="vxtmt4_97">build.gradle</code>)</span></p><div class="code-block" data-lang="groovy">
+implementation 'com.google.android.gms:play-services-location:21.0.1' // Vérifier la dernière version
+</div><p id="vxtmt4_90"><span class="control" id="vxtmt4_98">Utilisation</span></p><div class="code-block" data-lang="kotlin">
+// Dans votre Fragment ou Activity
+private lateinit var fusedLocationClient: FusedLocationProviderClient
+
+// Dans onCreate() ou onViewCreated()
+fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
+
+// Fonction pour obtenir la dernière position connue (rapide mais peut être nulle)
+@SuppressLint(&quot;MissingPermission&quot;) // La permission est vérifiée avant l'appel
+private fun getLastLocation() {
+    // Vérifier les permissions (ACCESS_FINE_LOCATION) avant d'appeler cette fonction !
+    fusedLocationClient.lastLocation
+        .addOnSuccessListener { location: Location? -&gt;
+            if (location != null) {
+                val latitude = location.latitude
+                val longitude = location.longitude
+                myTextView.text = &quot;Lat: $latitude, Lon: $longitude&quot;
+            } else {
+                Toast.makeText(requireContext(), &quot;Position non disponible&quot;, Toast.LENGTH_SHORT).show()
+                // Ici, on pourrait déclencher une demande de mise à jour de la position
+            }
+        }
+}
+</div><p id="vxtmt4_92"><span class="control" id="vxtmt4_99">Bonne pratique :</span> Toujours v&eacute;rifier les permissions avant d'appeler <code class="code" id="vxtmt4_100">fusedLocationClient.lastLocation</code>.</p></section><section class="chapter"><h2 id="4-la-cartographie" data-toc="4-la-cartographie"><span class="control" id="vxtmt4_117">4. La Cartographie</span></h2><p id="vxtmt4_102">Le <span class="control" id="vxtmt4_118">SDK Google Maps pour Android</span> est la solution standard pour int&eacute;grer des cartes.</p><p id="vxtmt4_103"><span class="control" id="vxtmt4_119">&Eacute;tape 1 : Configuration</span></p><ol class="list _decimal" id="vxtmt4_104" type="1"><li class="list__item" id="vxtmt4_120"><p id="vxtmt4_123">Allez sur la <span class="control" id="vxtmt4_124">Google Cloud Platform Console</span>, cr&eacute;ez un projet et activez le &quot;Maps SDK for Android&quot;.</p></li><li class="list__item" id="vxtmt4_121"><p id="vxtmt4_125">Cr&eacute;ez une cl&eacute; d'API.</p></li><li class="list__item" id="vxtmt4_122"><p id="vxtmt4_126">Ajoutez votre cl&eacute; dans le fichier <code class="code" id="vxtmt4_127">local.properties</code> (pour la s&eacute;curit&eacute;) ou directement dans <code class="code" id="vxtmt4_128">AndroidManifest.xml</code>.</p></li></ol><p id="vxtmt4_105"><span class="control" id="vxtmt4_129">&Eacute;tape 2 : D&eacute;pendances et Manifest</span></p><p id="vxtmt4_106"><span class="control" id="vxtmt4_130">D&eacute;pendance (<code class="code" id="vxtmt4_131">build.gradle</code>)</span></p><div class="code-block" data-lang="groovy">
+implementation 'com.google.android.gms:play-services-maps:18.1.0' // Vérifier la dernière version
+</div><p id="vxtmt4_108"><span class="control" id="vxtmt4_132"><code class="code" id="vxtmt4_133">AndroidManifest.xml</code></span></p><div class="code-block" data-lang="markup">
+
+&lt;application ...&gt;
+        ...
+&lt;meta-data
+android:name=&quot;com.google.android.geo.API_KEY&quot;
+android:value=&quot;VOTRE_CLE_API_ICI&quot;/&gt;
+        &lt;/application&gt;
+</div><p id="vxtmt4_110"><span class="control" id="vxtmt4_134">&Eacute;tape 3 : Afficher une carte</span></p><p id="vxtmt4_111">La m&eacute;thode la plus simple est d'utiliser un <code class="code" id="vxtmt4_135">SupportMapFragment</code>.</p><p id="vxtmt4_112"><span class="control" id="vxtmt4_136">Layout XML (<code class="code" id="vxtmt4_137">activity_main.xml</code>)</span></p><div class="code-block" data-lang="markup">
+
+&lt;androidx.fragment.app.FragmentContainerView
+        xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+        android:id=&quot;@+id/map&quot;
+        android:name=&quot;com.google.android.gms.maps.SupportMapFragment&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;match_parent&quot;/&gt;
+</div><p id="vxtmt4_114"><span class="control" id="vxtmt4_138">Code (dans <code class="code" id="vxtmt4_139">MainActivity.kt</code>)</span></p><div class="code-block" data-lang="kotlin">
+class MainActivity : AppCompatActivity(), OnMapReadyCallback {
+
+    private lateinit var googleMap: GoogleMap
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        // Récupérer le fragment et notifier quand la carte est prête
+        val mapFragment = supportFragmentManager
+            .findFragmentById(R.id.map) as SupportMapFragment
+        mapFragment.getMapAsync(this)
+    }
+
+    // Cette fonction est appelée quand la carte est prête à être utilisée
+    override fun onMapReady(map: GoogleMap) {
+        googleMap = map
+
+        // Exemple : Ajouter un marqueur à Sydney, Australie, et déplacer la caméra
+        val sydney = LatLng(-34.0, 151.0)
+        googleMap.addMarker(MarkerOptions().position(sydney).title(&quot;Marqueur à Sydney&quot;))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+    }
+}
+</div></section><section class="chapter"><h2 id="r-sum-et-bonnes-pratiques" data-toc="r-sum-et-bonnes-pratiques"><span class="control" id="vxtmt4_142">R&eacute;sum&eacute; et Bonnes Pratiques</span></h2><ul class="list _bullet" id="vxtmt4_141"><li class="list__item" id="vxtmt4_143"><p id="vxtmt4_147"><span class="control" id="vxtmt4_148">Permissions d'abord :</span> Ne jamais essayer d'acc&eacute;der &agrave; une ressource sans avoir v&eacute;rifi&eacute; et obtenu la permission. Informez l'utilisateur si la permission est refus&eacute;e.</p></li><li class="list__item" id="vxtmt4_144"><p id="vxtmt4_149"><span class="control" id="vxtmt4_150">Cycle de vie :</span> Utilisez des biblioth&egrave;ques lifecycle-aware (comme CameraX) et assurez-vous de stopper les mises &agrave; jour de localisation (si vous en demandez en continu) dans <code class="code" id="vxtmt4_151">onPause()</code> ou <code class="code" id="vxtmt4_152">onStop()</code> pour pr&eacute;server la batterie.</p></li><li class="list__item" id="vxtmt4_145"><p id="vxtmt4_153"><span class="control" id="vxtmt4_154">Thread principal :</span> Les op&eacute;rations de cam&eacute;ra, de localisation et de r&eacute;seau peuvent &ecirc;tre lentes. Les API modernes g&egrave;rent souvent cela pour vous, mais gardez &agrave; l'esprit de ne pas bloquer le thread UI.</p></li><li class="list__item" id="vxtmt4_146"><p id="vxtmt4_155"><span class="control" id="vxtmt4_156">D&eacute;gradation gracieuse :</span> Que se passe-t-il si l'utilisateur n'a pas de GPS ? Ou refuse la permission ? Votre application doit continuer &agrave; fonctionner de mani&egrave;re pr&eacute;visible.</p></li></ul></section><section class="chapter"><h2 id="exercices-pratiques" data-toc="exercices-pratiques"><span class="control" id="vxtmt4_159">Exercices Pratiques</span></h2><ol class="list _decimal" id="vxtmt4_158" type="1"><li class="list__item" id="vxtmt4_160"><p id="vxtmt4_162"><span class="control" id="vxtmt4_164">&quot;Photo Tagg&eacute;e&quot; :</span> Cr&eacute;ez une application avec un bouton. Quand on clique :</p><ul class="list _bullet" id="vxtmt4_163"><li class="list__item" id="vxtmt4_165"><p id="vxtmt4_169">Demandez les permissions pour la cam&eacute;ra et la localisation.</p></li><li class="list__item" id="vxtmt4_166"><p id="vxtmt4_170">Obtenez la position GPS actuelle.</p></li><li class="list__item" id="vxtmt4_167"><p id="vxtmt4_171">Lancez l'appareil photo.</p></li><li class="list__item" id="vxtmt4_168"><p id="vxtmt4_172">Affichez la photo prise avec, en dessous, les coordonn&eacute;es (latitude, longitude) o&ugrave; elle a &eacute;t&eacute; prise.</p></li></ul></li><li class="list__item" id="vxtmt4_161"><p id="vxtmt4_173"><span class="control" id="vxtmt4_175">&quot;Carte de Souvenirs&quot; :</span> Am&eacute;liorez l'exercice 1.</p><ul class="list _bullet" id="vxtmt4_174"><li class="list__item" id="vxtmt4_176"><p id="vxtmt4_179">Affichez une carte Google Maps.</p></li><li class="list__item" id="vxtmt4_177"><p id="vxtmt4_180">Apr&egrave;s avoir pris une photo, placez un marqueur sur la carte &agrave; l'endroit o&ugrave; la photo a &eacute;t&eacute; prise.</p></li><li class="list__item" id="vxtmt4_178"><p id="vxtmt4_181">(Bonus) Quand l'utilisateur clique sur le marqueur, affichez la photo correspondante dans une petite fen&ecirc;tre d'information.</p></li></ul></li></ol></section><div class="last-modified">30 octobre 2025</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="007-004-module-20.html" class="navigation-links__prev">Module 20 : Gestion Fiable des T&acirc;ches en Arri&egrave;re-plan avec WorkManager</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.22.0-b776/app.js"></script></body></html>
